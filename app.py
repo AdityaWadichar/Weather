@@ -1,10 +1,20 @@
-import requests
+import requests, os
 import sqlite3 as sql
 from flask import Flask, render_template, request, flash, redirect, url_for
 
 app = Flask(__name__)
 app.secret_key='Very secrete'
 
+if not os.path.isfile('database.db'):
+	conn = sql.connect('database.db')
+	print("Opened database successfully")
+
+	conn.execute('CREATE TABLE Cities (name TEXT)')
+	print("Table created successfully")
+	conn.close()
+
+else:
+	print("Table already exists")
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
