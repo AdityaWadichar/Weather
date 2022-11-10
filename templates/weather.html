@@ -34,6 +34,10 @@
                                 </button>
                             </div>
                         </div>
+{% for message in get_flashed_messages() %}
+  <p style="color: red;">{{ message }}</p>
+{% endfor %}
+			<a href = "\del">Delete all cities</a>
                     </form>
                 </div>
             </div>
@@ -64,6 +68,7 @@
                         </article>
                     </div>
                     {% endfor %}
+			
                 </div>
             </div>
         </div>
