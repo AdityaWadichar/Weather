@@ -21,4 +21,4 @@ This webpage has dashboard where the user can enter the name of a cities and do 
 
 
 ## Webpage
-![](https://github.com/AdityaWadichar/Weather/blob/424666cfa23df81a26015f754e1738b6af3456e2/Weather_image.png)
+![](Weather_image.png)
